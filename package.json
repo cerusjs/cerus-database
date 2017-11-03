@@ -1,6 +1,6 @@
 {
 	"name": "cerus-database",
-	"version": "0.0.5",
+	"version": "0.0.1",
 	"description": "The database module for CerusJS",
 	"main": "index.js",
 	"repository": {
