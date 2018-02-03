@@ -1,20 +1,19 @@
 module.exports = function() {
-	var self = {};
-
+	var plugin = {};
 	var package = require("./package.json");
-	
-	self.name = package["name"];
-	self.version = package["version"];
-
 	var database;
+	
+	plugin.name = package["name"];
+	plugin.version = package["version"];
 
-	self.init_ = function(cerus) {
+
+	plugin._init = function(cerus) {
 		database = require("./lib/database")(cerus);
 	}
 
-	self.database = function() {
+	plugin.database = function() {
 		return database;
 	}
 
-	return self;
+	return plugin;
 }
