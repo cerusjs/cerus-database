@@ -8,7 +8,7 @@ module.exports = function() {
 
 
 	plugin._init = function(cerus) {
-		database = require("./lib/database")(cerus);
+		database = new (require("./lib/database"))(cerus);
 	}
 
 	plugin.database = function() {
